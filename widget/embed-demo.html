@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GDP Widget Demo</title>
+  </head>
+  <body style="margin: 24px; font-family: system-ui, sans-serif; background: #f8fafc;">
+    <h1>GDP Widget Demo</h1>
+    <div id="gdp-widget-root"></div>
+    <script src="gdp-widget.js"></script>
+    <script>
+      GdpWidget.render('gdp-widget-root', {
+        title: 'GDP dashboard widget',
+        dataUrl: 'gdp-widget-data.csv',
+        countries: ['DEU', 'FRA', 'GBR', 'BRA', 'MEX', 'JPN'],
+        fromYear: 2018,
+        toYear: 2022,
+      });
+    </script>
+  </body>
+</html>

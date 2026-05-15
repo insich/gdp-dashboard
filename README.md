@@ -17,3 +17,12 @@ A simple Streamlit app showing the GDP of different countries in the world.
    ```
    $ streamlit run streamlit_app.py
    ```
+
+## Embeddable React widget
+
+A lightweight React widget is now available in `widget/` for embedding GDP data on other websites.
+
+- `widget/gdp-widget.js` contains the embeddable widget script.
+- `widget/embed-demo.html` shows how to render it.
+- `widget/README.md` explains usage, configuration, and dataset format.
+
