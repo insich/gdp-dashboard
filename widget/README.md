@@ -43,7 +43,7 @@ If you prefer the raw GitHub file URL instead, use:
 - `countries`: Array of country codes to show by default.
 - `fromYear`: Start year for the time range.
 - `toYear`: End year for the time range.
-- `dataUrl`: Optional URL to a CSV or JSON dataset.
+- `api`: Optional URL to a CSV or JSON dataset.
 - `data`: Optional JavaScript array of data rows.
 
 ## Data format
@@ -60,24 +60,24 @@ The CSV must include at least these headers:
 
 The demo includes a sample data file at `widget/gdp-widget-data.csv`.
 
-### Example `dataUrl`
+### Example `api`
 
 Use a local or hosted CSV URL:
 
 ```js
 GdpWidget.render('gdp-widget-root', {
-  dataUrl: './gdp-widget-data.csv',
+  api: './gdp-widget-data.csv',
   countries: ['DEU', 'FRA', 'GBR', 'BRA', 'MEX', 'JPN'],
   fromYear: 2018,
   toYear: 2022,
 });
 ```
 
-If you host the widget from GitHub, the raw URL could look like:
+Since the CSV is stored in the repo, you can also load it directly from GitHub raw:
 
 ```js
 GdpWidget.render('gdp-widget-root', {
-  dataUrl: 'https://raw.githubusercontent.com/insich/gdp-dashboard/main/widget/gdp-widget-data.csv',
+  api: 'https://raw.githubusercontent.com/insich/gdp-dashboard/main/widget/gdp-widget-data.csv',
   countries: ['DEU', 'FRA', 'GBR', 'BRA', 'MEX', 'JPN'],
 });
 ```
